@@ -66,10 +66,14 @@ Description=WebRTC Streamer Service
 After=network.target
 
 [Service]
-ExecStart=$APP_DIR/webrtc-streamer -C $APP_DIR/config.json
-WorkingDirectory=$APP_DIR
+ExecStart=/bin/bash -c '/opt/webrtc-streamer/webrtc-streamer -C /opt/webrtc-streamer/config.json'
+WorkingDirectory=/opt/webrtc-streamer
 Restart=always
+RestartSec=5s
+StandardOutput=journal
+StandardError=inherit
 User=root
+Type=simple
 
 [Install]
 WantedBy=multi-user.target
