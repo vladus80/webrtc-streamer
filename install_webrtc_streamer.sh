@@ -20,7 +20,7 @@ apt update && apt upgrade -y
 
 # === 2. Установка зависимостей ===
 echo "=== 2. Установка зависимостей ==="
-apt install  wget curl ffmpeg v4l-utils git build-essential cmake libnsl2 libsm6 mc htop -y
+apt install -y wget curl ffmpeg v4l-utils git build-essential cmake libnsl2 libsm6 mc htop
 
 # === 3. Скачивание webrtc-streamer ===
 echo "=== 3. Скачивание webrtc-streamer ==="
